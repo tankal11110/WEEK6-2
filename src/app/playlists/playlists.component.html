@@ -1,0 +1,42 @@
+<style>
+   .playlist-row{
+       border-bottom: 2px solid transparent;
+   }
+</style>
+<div class="row">
+    
+</div>
+
+<div class="row">
+
+
+   <div class="col-sm-6">
+       <cotent-card>
+           <router-outlet></router-outlet>
+       </cotent-card>
+   </div>
+   <!--<div class="col-sm-6">
+       <div [ngSwitch] = "mode">
+
+           <cotent-card title="Playlista" content="Choose playlist" *ngSwitchDefault></cotent-card>   
+           
+           <cotent-card title="Playlista {{selected.name}}" *ngSwitchCase = "2">   
+               <playlist-detail [playlist]="selected" (editPlaylist) = "edit($event)"></playlist-detail>
+           </cotent-card>
+
+           <cotent-card title="Playlista {{selected.name}}" *ngSwitchCase = "1">
+               <playlist-form [playlist]="edited" (saved)="save($event)"></playlist-form>
+           </cotent-card>
+        </div>
+    </div>-->
+
+    <div class="col-sm-6">
+  
+        <playlists-list [selected]="selected" [playlists]="playlists"></playlists-list>
+        <div class="form-group">
+             <button class="btn btn-success float-xs-right" [routerLink]="['new']">Nowa Playlista</button>
+        </div>
+    </div>
+
+</div>
+
